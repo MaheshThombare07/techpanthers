@@ -1,0 +1,684 @@
+{
+    "cities": {
+        "Pune": [
+            {
+                "name": "Pimpri",
+                "lat": 18.6298,
+                "lng": 73.7997,
+                "foot_traffic": 85,
+                "population_density": 13490,
+                "daily_orders": 545,
+                "existing_stores": 0
+            },
+            {
+                "name": "Baner",
+                "lat": 18.5642,
+                "lng": 73.7769,
+                "foot_traffic": 50,
+                "population_density": 19025,
+                "daily_orders": 782,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 18.562178,
+                        "lng": 73.781032
+                    },
+                    {
+                        "lat": 18.564729,
+                        "lng": 73.771804
+                    },
+                    {
+                        "lat": 18.561553,
+                        "lng": 73.773954
+                    }
+                ]
+            },
+            {
+                "name": "Lohegaon",
+                "lat": 18.6041,
+                "lng": 73.9235,
+                "foot_traffic": 75,
+                "population_density": 15746,
+                "daily_orders": 556,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 18.594227,
+                        "lng": 73.92419
+                    },
+                    {
+                        "lat": 18.601612,
+                        "lng": 73.932366
+                    },
+                    {
+                        "lat": 18.612579,
+                        "lng": 73.923646
+                    }
+                ]
+            },
+            {
+                "name": "Kothrud",
+                "lat": 18.5074,
+                "lng": 73.8077,
+                "foot_traffic": 87,
+                "population_density": 9683,
+                "daily_orders": 624,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 18.502567,
+                        "lng": 73.812122
+                    },
+                    {
+                        "lat": 18.508554,
+                        "lng": 73.802869
+                    },
+                    {
+                        "lat": 18.515434,
+                        "lng": 73.798081
+                    }
+                ]
+            },
+            {
+                "name": "Viman Nagar",
+                "lat": 18.5679,
+                "lng": 73.9143,
+                "foot_traffic": 79,
+                "population_density": 7717,
+                "daily_orders": 392,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 18.577591,
+                        "lng": 73.908948
+                    },
+                    {
+                        "lat": 18.56067,
+                        "lng": 73.907021
+                    },
+                    {
+                        "lat": 18.570385,
+                        "lng": 73.923195
+                    }
+                ]
+            },
+            {
+                "name": "Hinjewadi",
+                "lat": 18.5922,
+                "lng": 73.7413,
+                "foot_traffic": 89,
+                "population_density": 15938,
+                "daily_orders": 759,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 18.587533,
+                        "lng": 73.745186
+                    },
+                    {
+                        "lat": 18.583525,
+                        "lng": 73.733394
+                    },
+                    {
+                        "lat": 18.600664,
+                        "lng": 73.750171
+                    }
+                ]
+            },
+            {
+                "name": "Shivaji Nagar",
+                "lat": 18.5308,
+                "lng": 73.8473,
+                "foot_traffic": 77,
+                "population_density": 9465,
+                "daily_orders": 257,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 18.537663,
+                        "lng": 73.839072
+                    },
+                    {
+                        "lat": 18.522029,
+                        "lng": 73.848193
+                    }
+                ]
+            },
+            {
+                "name": "Hadapsar",
+                "lat": 18.5089,
+                "lng": 73.926,
+                "foot_traffic": 88,
+                "population_density": 14780,
+                "daily_orders": 760,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 18.518281,
+                        "lng": 73.916211
+                    }
+                ]
+            },
+            {
+                "name": "Wakad",
+                "lat": 18.597,
+                "lng": 73.762,
+                "foot_traffic": 57,
+                "population_density": 11625,
+                "daily_orders": 234,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 18.593358,
+                        "lng": 73.753032
+                    },
+                    {
+                        "lat": 18.601097,
+                        "lng": 73.760729
+                    }
+                ]
+            },
+            {
+                "name": "Kharadi",
+                "lat": 18.5514,
+                "lng": 73.9355,
+                "foot_traffic": 52,
+                "population_density": 19162,
+                "daily_orders": 228,
+                "existing_stores": 0
+            }
+        ],
+        "Mumbai": [
+            {
+                "name": "Andheri West",
+                "lat": 19.1368,
+                "lng": 72.8277,
+                "foot_traffic": 83,
+                "population_density": 16250,
+                "daily_orders": 211,
+                "existing_stores": 0
+            },
+            {
+                "name": "Bandra",
+                "lat": 19.055,
+                "lng": 72.8295,
+                "foot_traffic": 92,
+                "population_density": 7540,
+                "daily_orders": 721,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 19.046002,
+                        "lng": 72.819642
+                    },
+                    {
+                        "lat": 19.055138,
+                        "lng": 72.819609
+                    },
+                    {
+                        "lat": 19.04898,
+                        "lng": 72.828553
+                    }
+                ]
+            },
+            {
+                "name": "Dadar",
+                "lat": 19.019,
+                "lng": 72.842,
+                "foot_traffic": 67,
+                "population_density": 15486,
+                "daily_orders": 320,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 19.027298,
+                        "lng": 72.837666
+                    },
+                    {
+                        "lat": 19.013782,
+                        "lng": 72.834537
+                    },
+                    {
+                        "lat": 19.019621,
+                        "lng": 72.841693
+                    }
+                ]
+            },
+            {
+                "name": "Goregaon",
+                "lat": 19.1551,
+                "lng": 72.8493,
+                "foot_traffic": 72,
+                "population_density": 14954,
+                "daily_orders": 550,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 19.150764,
+                        "lng": 72.855158
+                    }
+                ]
+            },
+            {
+                "name": "Powai",
+                "lat": 19.1186,
+                "lng": 72.9042,
+                "foot_traffic": 72,
+                "population_density": 19691,
+                "daily_orders": 634,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 19.12006,
+                        "lng": 72.905462
+                    },
+                    {
+                        "lat": 19.111088,
+                        "lng": 72.900392
+                    },
+                    {
+                        "lat": 19.11234,
+                        "lng": 72.897664
+                    }
+                ]
+            },
+            {
+                "name": "Juhu",
+                "lat": 19.1071,
+                "lng": 72.8272,
+                "foot_traffic": 83,
+                "population_density": 18969,
+                "daily_orders": 744,
+                "existing_stores": 0
+            },
+            {
+                "name": "Malad",
+                "lat": 19.1853,
+                "lng": 72.8484,
+                "foot_traffic": 52,
+                "population_density": 19714,
+                "daily_orders": 642,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 19.178523,
+                        "lng": 72.855562
+                    },
+                    {
+                        "lat": 19.190224,
+                        "lng": 72.841469
+                    },
+                    {
+                        "lat": 19.194371,
+                        "lng": 72.853272
+                    }
+                ]
+            },
+            {
+                "name": "Borivali",
+                "lat": 19.2307,
+                "lng": 72.8544,
+                "foot_traffic": 85,
+                "population_density": 6903,
+                "daily_orders": 763,
+                "existing_stores": 0
+            },
+            {
+                "name": "Vile Parle",
+                "lat": 19.099,
+                "lng": 72.8445,
+                "foot_traffic": 81,
+                "population_density": 6500,
+                "daily_orders": 395,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 19.092322,
+                        "lng": 72.848283
+                    }
+                ]
+            },
+            {
+                "name": "Chembur",
+                "lat": 19.0611,
+                "lng": 72.8969,
+                "foot_traffic": 92,
+                "population_density": 9393,
+                "daily_orders": 752,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 19.069601,
+                        "lng": 72.888468
+                    },
+                    {
+                        "lat": 19.062032,
+                        "lng": 72.890088
+                    }
+                ]
+            }
+        ],
+        "Delhi": [
+            {
+                "name": "Connaught Place",
+                "lat": 28.6315,
+                "lng": 77.2167,
+                "foot_traffic": 72,
+                "population_density": 8658,
+                "daily_orders": 657,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 28.630149,
+                        "lng": 77.215465
+                    }
+                ]
+            },
+            {
+                "name": "Saket",
+                "lat": 28.5245,
+                "lng": 77.2066,
+                "foot_traffic": 63,
+                "population_density": 19494,
+                "daily_orders": 645,
+                "existing_stores": 0
+            },
+            {
+                "name": "Rohini",
+                "lat": 28.7387,
+                "lng": 77.0672,
+                "foot_traffic": 62,
+                "population_density": 6976,
+                "daily_orders": 323,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 28.748106,
+                        "lng": 77.074639
+                    },
+                    {
+                        "lat": 28.732788,
+                        "lng": 77.076236
+                    },
+                    {
+                        "lat": 28.738166,
+                        "lng": 77.076053
+                    }
+                ]
+            },
+            {
+                "name": "Lajpat Nagar",
+                "lat": 28.5687,
+                "lng": 77.2433,
+                "foot_traffic": 59,
+                "population_density": 6589,
+                "daily_orders": 302,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 28.568525,
+                        "lng": 77.248554
+                    },
+                    {
+                        "lat": 28.566058,
+                        "lng": 77.244101
+                    },
+                    {
+                        "lat": 28.569697,
+                        "lng": 77.247572
+                    }
+                ]
+            },
+            {
+                "name": "Karol Bagh",
+                "lat": 28.6519,
+                "lng": 77.1909,
+                "foot_traffic": 74,
+                "population_density": 12702,
+                "daily_orders": 766,
+                "existing_stores": 0
+            },
+            {
+                "name": "Pitampura",
+                "lat": 28.698,
+                "lng": 77.1324,
+                "foot_traffic": 98,
+                "population_density": 14121,
+                "daily_orders": 293,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 28.70436,
+                        "lng": 77.140909
+                    }
+                ]
+            },
+            {
+                "name": "Dwarka",
+                "lat": 28.6139,
+                "lng": 77.0333,
+                "foot_traffic": 85,
+                "population_density": 18666,
+                "daily_orders": 335,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 28.60472,
+                        "lng": 77.023377
+                    },
+                    {
+                        "lat": 28.621858,
+                        "lng": 77.03578
+                    }
+                ]
+            },
+            {
+                "name": "Janakpuri",
+                "lat": 28.6105,
+                "lng": 77.0812,
+                "foot_traffic": 94,
+                "population_density": 12427,
+                "daily_orders": 632,
+                "existing_stores": 0
+            },
+            {
+                "name": "Greater Kailash",
+                "lat": 28.5484,
+                "lng": 77.2368,
+                "foot_traffic": 81,
+                "population_density": 17823,
+                "daily_orders": 289,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 28.549034,
+                        "lng": 77.228403
+                    }
+                ]
+            },
+            {
+                "name": "Nehru Place",
+                "lat": 28.5483,
+                "lng": 77.251,
+                "foot_traffic": 70,
+                "population_density": 11054,
+                "daily_orders": 245,
+                "existing_stores": 0
+            }
+        ],
+        "Bangalore": [
+            {
+                "name": "MG Road",
+                "lat": 12.974,
+                "lng": 77.609,
+                "foot_traffic": 71,
+                "population_density": 15932,
+                "daily_orders": 747,
+                "existing_stores": 0
+            },
+            {
+                "name": "Koramangala",
+                "lat": 12.9352,
+                "lng": 77.6245,
+                "foot_traffic": 69,
+                "population_density": 6488,
+                "daily_orders": 716,
+                "existing_stores": 0
+            },
+            {
+                "name": "Whitefield",
+                "lat": 12.9698,
+                "lng": 77.7499,
+                "foot_traffic": 67,
+                "population_density": 17836,
+                "daily_orders": 575,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 12.97616,
+                        "lng": 77.75812
+                    },
+                    {
+                        "lat": 12.977731,
+                        "lng": 77.753123
+                    },
+                    {
+                        "lat": 12.962442,
+                        "lng": 77.74086
+                    }
+                ]
+            },
+            {
+                "name": "Indiranagar",
+                "lat": 12.9784,
+                "lng": 77.6408,
+                "foot_traffic": 53,
+                "population_density": 19702,
+                "daily_orders": 233,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 12.978471,
+                        "lng": 77.632684
+                    },
+                    {
+                        "lat": 12.986052,
+                        "lng": 77.642648
+                    },
+                    {
+                        "lat": 12.978787,
+                        "lng": 77.639705
+                    }
+                ]
+            },
+            {
+                "name": "Electronic City",
+                "lat": 12.839,
+                "lng": 77.677,
+                "foot_traffic": 55,
+                "population_density": 11377,
+                "daily_orders": 245,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 12.837658,
+                        "lng": 77.668894
+                    },
+                    {
+                        "lat": 12.848637,
+                        "lng": 77.680844
+                    },
+                    {
+                        "lat": 12.839657,
+                        "lng": 77.672909
+                    }
+                ]
+            },
+            {
+                "name": "Jayanagar",
+                "lat": 12.925,
+                "lng": 77.593,
+                "foot_traffic": 67,
+                "population_density": 8010,
+                "daily_orders": 506,
+                "existing_stores": 1,
+                "store_locations": [
+                    {
+                        "lat": 12.917805,
+                        "lng": 77.58902
+                    }
+                ]
+            },
+            {
+                "name": "Marathahalli",
+                "lat": 12.956,
+                "lng": 77.701,
+                "foot_traffic": 73,
+                "population_density": 6971,
+                "daily_orders": 492,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 12.959687,
+                        "lng": 77.7093
+                    },
+                    {
+                        "lat": 12.954832,
+                        "lng": 77.706383
+                    }
+                ]
+            },
+            {
+                "name": "Yeshwanthpur",
+                "lat": 13.028,
+                "lng": 77.555,
+                "foot_traffic": 89,
+                "population_density": 6432,
+                "daily_orders": 233,
+                "existing_stores": 2,
+                "store_locations": [
+                    {
+                        "lat": 13.023158,
+                        "lng": 77.54521
+                    },
+                    {
+                        "lat": 13.027277,
+                        "lng": 77.559108
+                    }
+                ]
+            },
+            {
+                "name": "Rajajinagar",
+                "lat": 12.991,
+                "lng": 77.554,
+                "foot_traffic": 85,
+                "population_density": 10571,
+                "daily_orders": 238,
+                "existing_stores": 3,
+                "store_locations": [
+                    {
+                        "lat": 12.99736,
+                        "lng": 77.552083
+                    },
+                    {
+                        "lat": 12.987928,
+                        "lng": 77.54936
+                    },
+                    {
+                        "lat": 12.99702,
+                        "lng": 77.554639
+                    }
+                ]
+            },
+            {
+                "name": "Bannerghatta",
+                "lat": 12.801,
+                "lng": 77.577,
+                "foot_traffic": 98,
+                "population_density": 9255,
+                "daily_orders": 463,
+                "existing_stores": 0
+            }
+        ]
+    }
+}
