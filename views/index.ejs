@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatmap-Based Store Placement</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <style>
+    </style>
+</head>
+<body>
+
+    
+<script src="socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+let newData;
+
+let body=document.querySelector("body");
+socket.on("data", (d) => {
+    console.log("Received Data:", d);  
+
+    if (!d.cities || !d.cities.Pune) {
+        console.error("Invalid data structure:", d);
+        return;
+    }
+
+    // Clear previous content before appending new data
+    document.body.innerHTML = "";  
+
+    for (let area of d.cities.Pune) {
+        console.log("Area Data:", area);
+
+        // let a = calculateDemandScore(area);
+
+        let h1 = document.createElement('h1');
+        h1.textContent = area.name;
+       
+        // let v= analyzeAreaDemand(area);
+        h1.style.color =getColor(area);
+        document.body.appendChild(h1);
+    }
+});
+
+
+
+      // Function to calculate demand score and assign color
+function getColor(area) {
+    let demandScore = (area.foot_traffic * 0.5) + (area.daily_orders * 0.5) - (area.existing_stores * 150);
+    console.log("ddddd",demandScore);
+    if (demandScore > 250) return "green";  // 🟢 High demand (New store needed)
+    if (demandScore > 100) return "yellow"; // 🟡 Medium demand (Consider opening)
+    return "red";                           // 🔴 Low demand (Not ideal)
+}
+
+
+        
+// function calculateDemandScore(area) {
+//     let demandScore = (area.foot_traffic * 0.6) + (area.daily_orders * 0.7) - (area.existing_stores * 30);
+//     return Math.max(demandScore, 0); // Ensure demand score is not negative
+// }
+
+// function getColor(demandScore) {
+//     if (demandScore > 800) return "red";  // 🔥 High demand (NEEDS store)
+//     if (demandScore > 500) return "yellow";  // ⚡ Medium demand (Consider store)
+//     if (demandScore > 300) return "green";     // 🟡 Low demand (Maybe later)
+//     return "orange";                          // ✅ No demand (Enough stores)
+// }
+
+
+
+
+
+// function analyzeAreaDemand(area) {
+    
+//     if (area.foot_traffic > 100 && area.daily_orders > 400 && area.existing_stores <= 0) {
+//         return { category: "Green", reason: "High demand, store needed urgently" };
+//     } 
+//     else if (area.foot_traffic > 50 && area.daily_orders > 200 && area.existing_stores <= 1) {
+//         return { category: "Yellow", reason: "Medium demand, consider opening a store" };
+//     } 
+//     else {
+//         return { category: "Red", reason: "Low demand, not ideal for a store" };
+//     }
+// }
+
+// 🔥 Test the function
+// let testArea = {
+//     name: "Kharadi",
+//     lat: 18.5514,
+//     lng: 73.9355,
+//     foot_traffic: 52,
+//     population_density: 19162,
+//     daily_orders: 228,
+//     existing_stores: 0
+// };
+
+// console.log(analyzeAreaDemand(testArea));
+
+
+
+
+
+
+        // function color(){
+        //     let h1 = document.getElementById("mt");
+        //     var n=calculateDemandScore(c);
+        //     h1.style.color=getColor(n);
+        // }
+    </script>
+
+</body>
+</html>
