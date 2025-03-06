@@ -79,7 +79,7 @@ nav {
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: #343a40;
     /* overflow-y: scroll; */
@@ -170,8 +170,8 @@ select {
 
 .graph {
     margin-bottom: 25px;
-    background: white;
     padding: 15px;
+    background: white;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -222,6 +222,12 @@ select {
     font-size: medium;
     text-align: center;
     
+}
+#suggested-area{
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
 }
     </style>
 </head>
@@ -476,7 +482,8 @@ function suggestNewStore(city) {
         let displayElement = document.getElementById("suggested-area");
         
         if (bestArea) {
-            displayElement.innerHTML = `    <p id="#sa">Suggested Area: <strong style="color:green">${bestArea.name}</strong></p>`;
+            displayElement.innerHTML = `    <h3>Suggested Area</h3><hr><p id="#sa">Area: <strong style="color:green">${bestArea.name}</strong> &nbsp&nbsp&nbspExisting Stores:${bestArea.existing_stores}</p><p>Population :${bestArea.population_density} &nbsp &nbsp &nbsp Foot Traffic:${bestArea.foot_traffic}</p><p></p></p><p></p>`;
+            
         } else {
             displayElement.innerHTML = `     <p id="#sa">No suitable area found.</p>`;
         }
