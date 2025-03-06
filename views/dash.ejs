@@ -98,8 +98,13 @@ justify-content: center;
 flex-direction: row;
 }
 #map{
-    width: 80vw;
+    width: 75vw;
     height: 100%;  
+    overflow: hidden;
+
+    padding: 10px;
+    border: 2px solid black;
+    
     }
 
     #map:before {
@@ -195,6 +200,10 @@ select {
 .graph:hover {
     transform: scale(1.05);
 }
+#map {
+            width: 100vw;
+            height: 40vh;
+        }
 
 #suggestions {
     background: white;
@@ -295,7 +304,42 @@ select {
         </aside>
     </div>
     <input type="hidden" id="cities-data" value='<%= JSON.stringify(cities) %>'>
+
+
+    <div id="map"></div>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
+        // let suggestedArea=document.querySelector("#suggested-area");
+        // let heatmap=document.querySelector(".heat-map");
+        
+        // Initialize the map
+        var map = L.map('map').setView([18.5204, 73.8567], 10); // Center on Pune
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Array of points
+        var points = [
+            { lat: 18.5204, lng: 73.8567, title: "Pune" },
+            { lat: 19.0760, lng: 72.8777, title: "Mumbai" },
+            { lat: 17.3850, lng: 78.4867, title: "Hyderabad" }
+        ];
+
+        // Add markers
+        points.forEach(point => {
+            L.marker([point.lat, point.lng]).addTo(map)
+                .bindPopup(point.title);
+        });
+    
+
+
+   
+
+
         let one =0;
         let two =0;
         let three =0;
@@ -305,13 +349,43 @@ console.log("Available cities:", cities);
 
 let cityData = []; // Declare globally
 
+if(!selectedCity){
+    // alert("hi");
+    // suggestedArea.style.opacity="0";
+    // heatmap.style.opacity="0";
+    
+    
+}
 document.getElementById("store-type").addEventListener("change", function () {
     selectedCity = this.options[this.selectedIndex].text; // Get selected city text
     console.log("Selected City:", selectedCity);
+    // map.setView([selectedCity.lat, selectedCity.lng], 10);
+    console.log("ccccccccccccccccc",cities[selectedCity])
+    if(selectedCity==="Pune"){
+        map.setView([18.5204, 73.8567], 10);
+    }
+    else if(selectedCity==="Delhi"){
+        map.setView([28.6139, 77.2090], 10);
+    }
+    else if(selectedCity==="Mumbai"){
+        map.setView([19.0760, 72.8777], 10);
+    }
+
+
+    for (let z of cities[selectedCity]) {
+    console.log("Adding marker:", z.lat, z.lng);
+
+    // Add marker for each location in the selected city
+    L.marker([z.lat, z.lng])
+        .addTo(map)
+        .bindPopup(z.name);
+}
+
 
     if (cities[selectedCity]) {
         cityData = cities[selectedCity]; // Assign selected city's data
         console.log("City Data:", cityData);
+
         renderHeatmap(); // Re-render heatmap after updating cityData
     } else {
         console.log("No data available for this city.");
@@ -573,15 +647,8 @@ function suggestNewStore(city) {
         return bestArea || null; // Return best area or null if all have stores
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Attach event listener to the parent (heatmap), not individual blocks
-    document.getElementById("heatmap").addEventListener("click", function (event) {
-        if (event.target.classList.contains("city-block")) {
-            let selectedValue = event.target.textContent.trim(); // Get city name
-            console.log("Clicked City:", selectedValue);
-            alert("You selected: " + selectedValue); // Display alert (for testing)
-        }
-    });
+document.querySelector(".city-block").addEventListener("click",()=>{
+    console.log(document.querySelector(".city-block").textContent)
 });
 
 
