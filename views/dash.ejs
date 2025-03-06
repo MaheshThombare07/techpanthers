@@ -257,7 +257,7 @@ select {
     <div class="container">
         <div class="">
         <aside class="left-panel graph">
-            <form action="/add" method="post">
+            <form >
                
             <div id="suggestions"></div>
             <select id="store-type">
@@ -311,8 +311,8 @@ select {
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // let suggestedArea=document.querySelector("#suggested-area");
-        // let heatmap=document.querySelector(".heat-map");
+        let suggestedArea=document.querySelector("#suggested-area");
+        let heatmap=document.querySelector("#heatmap");
         
         // Initialize the map
         var map = L.map('map').setView([18.5204, 73.8567], 10); // Center on Pune
@@ -349,14 +349,16 @@ console.log("Available cities:", cities);
 
 let cityData = []; // Declare globally
 
-if(!selectedCity){
-    // alert("hi");
-    // suggestedArea.style.opacity="0";
-    // heatmap.style.opacity="0";
+// if(!selectedCity){
+//     // alert("hi");
+//     suggestedArea.style.opacity="0";
+//     heatmap.style.opacity="0";
     
     
-}
+// }
 document.getElementById("store-type").addEventListener("change", function () {
+    // suggestedArea.style.opacity="1";
+    // heatmap.style.opacity="1";
     selectedCity = this.options[this.selectedIndex].text; // Get selected city text
     console.log("Selected City:", selectedCity);
     // map.setView([selectedCity.lat, selectedCity.lng], 10);
@@ -393,6 +395,7 @@ document.getElementById("store-type").addEventListener("change", function () {
         renderHeatmap(); // Render empty heatmap
     }
     console.log(suggestNewStore(selectedCity));
+
 });
 
 // function getHeatColor(density) {
@@ -552,16 +555,6 @@ function add(){
     ["#0056b3", "#1e7e34", "#c82333"]
 );
 }
-// 🔹 Initializing Charts (default values)
-// let populationChart = createChart(
-//     document.getElementById("populationChart"),
-//     "bar",
-//     ["High", "Medium", "Low"],
-//     [one, 35, 15],  // Dummy initial values
-//     ["#007bff", "#28a745", "#dc3545"],
-//     ["#0056b3", "#1e7e34", "#c82333"]
-// );
-
 
 createChart(
     document.getElementById("revenueChart"),
