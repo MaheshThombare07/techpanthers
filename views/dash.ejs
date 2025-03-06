@@ -502,15 +502,8 @@ function suggestNewStore(city) {
         return bestArea || null; // Return best area or null if all have stores
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Attach event listener to the parent (heatmap), not individual blocks
-    document.getElementById("heatmap").addEventListener("click", function (event) {
-        if (event.target.classList.contains("city-block")) {
-            let selectedValue = event.target.textContent.trim(); // Get city name
-            console.log("Clicked City:", selectedValue);
-            alert("You selected: " + selectedValue); // Display alert (for testing)
-        }
-    });
+document.querySelector(".city-block").addEventListener("click",()=>{
+    console.log(document.querySelector(".city-block").textContent)
 });
 
 
