@@ -47,8 +47,9 @@ function suggestNewStore(city) {
 var city='Mumbai';
 
 app.get("/",(req,res)=>{
-    console.log(suggestNewStore("Pune"));
-    res.render("home.ejs",{c:data.cities});
+    // console.log(suggestNewStore("Pune"));
+    // res.render("home.ejs",{c:data.cities});
+    res.redirect("/dash");
 });
 
 app.post("/index/add",(req,res)=>{
