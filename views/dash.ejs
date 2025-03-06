@@ -296,6 +296,9 @@ select {
     </div>
     <input type="hidden" id="cities-data" value='<%= JSON.stringify(cities) %>'>
     <script>
+        let one =0;
+        let two =0;
+        let three =0;
 let selectedCity;
 let cities = JSON.parse(document.getElementById('cities-data').value); // Getting data from hidden input
 console.log("Available cities:", cities);
@@ -354,6 +357,7 @@ function renderHeatmap(filter = "all") {
         cityBlock.classList.add("city-block");
         cityBlock.textContent = city.name;
         cityBlock.style.backgroundColor = getHeatColor(city);
+         cityBlock.dataset.cityInfo = JSON.stringify(city); // Store city info in data attribute
 
         cityBlock.onclick = () => {
             // window.location.href = `index.html?lat=${city.lat}&lon=${city.lon}&name=${encodeURIComponent(city.name)}`;
@@ -361,6 +365,50 @@ function renderHeatmap(filter = "all") {
 
         heatmap.appendChild(cityBlock);
     });
+
+
+    // Attach click event listener to #heatmap container (Event Delegation)
+document.getElementById("heatmap").addEventListener("click", function (event) {
+    if (event.target.classList.contains("city-block")) {
+        let selectedCity = event.target.textContent.trim(); // Get city name
+        let cityInfo = JSON.parse(event.target.dataset.cityInfo); // Retrieve city info
+
+        console.log("Clicked City:", selectedCity);
+        console.log("City Info:", cityInfo.daily_orders);
+
+        // alert(`You selected: ${selectedCity}\nFoot Traffic: ${cityInfo.foot_traffic}\nDaily Orders: ${cityInfo.daily_orders}`);
+
+        // Call function to update charts with city-specific data
+        updateCharts(cityInfo);
+    }
+});
+}
+// 🔹 Function to update charts dynamically when a city is clicked
+function updateCharts(cityInfo) {
+    // ✅ Update Population Chart with City Data
+    console.log("888888",cityInfo.daily_orders);
+    // populationChart.data.datasets[0].data = [
+    //     cityInfo.daily_orders|| 0, 
+    //     cityInfo.existing_stores|| 0, 
+    //     cityInfo.foot_traffic|| 0
+        
+    // ];
+    // populationChart.update();
+    one=0;
+    two=0;
+    three=0;
+    
+    // one=cityInfo.existing_stores+100;
+    if(!cityInfo.existing_stores){
+        one=cityInfo.existing_stores;
+    }
+    else{
+        one=cityInfo.existing_stores+100;
+    }
+    two=cityInfo.daily_orders;
+    three=cityInfo.foot_traffic;
+    add();
+    console.log("Add ! Time");
 }
 
         cityFilter.addEventListener("change", (e) => {
@@ -376,10 +424,14 @@ function renderHeatmap(filter = "all") {
 document.getElementById("submit-btn").addEventListener("click", function() {
     alert("Search: " + document.getElementById("city-search").value + "\nStore Type: " + document.getElementById("store-type").value);
 });
-
+let populationChart;
 // 🔹 Function to create different types of charts
 function createChart(ctx, type, labels, data, backgroundColor, borderColor) {
-    new Chart(ctx, {
+    if (populationChart) {
+        populationChart.destroy(); // ✅ Destroy existing chart before creating a new one
+    }
+    
+    populationChart=new Chart(ctx, {
         type: type,
         data: {
             labels: labels,
@@ -416,14 +468,26 @@ function createChart(ctx, type, labels, data, backgroundColor, borderColor) {
 }
 
 // 🔹 Creating different graphs with improved design
-createChart(
+function add(){
+    createChart(
     document.getElementById("populationChart"),
     "bar",
-    ["High", "Medium", "Low"],
-    [50, 35, 15],
+    ["Existing Stores", "Daily Orders", "Low"],
+    [one, two, three],
     ["#007bff", "#28a745", "#dc3545"],
     ["#0056b3", "#1e7e34", "#c82333"]
 );
+}
+// 🔹 Initializing Charts (default values)
+// let populationChart = createChart(
+//     document.getElementById("populationChart"),
+//     "bar",
+//     ["High", "Medium", "Low"],
+//     [one, 35, 15],  // Dummy initial values
+//     ["#007bff", "#28a745", "#dc3545"],
+//     ["#0056b3", "#1e7e34", "#c82333"]
+// );
+
 
 createChart(
     document.getElementById("revenueChart"),
