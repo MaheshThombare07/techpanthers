@@ -247,6 +247,8 @@ select {
     background: white;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -27px;
+    margin-bottom: 10px;
 }
     </style>
 </head>
@@ -266,7 +268,8 @@ select {
                 <option value="clothing">Delhi</option>
                 <option value="clothing">Mumbai</option>
             </select>
-            <button id="submit-btn">Submit</button>
+            <button id="submit-btn">Refresh</button>
+            <p><b>Note: </b>First Select The City Then Click On Any Heatmap Area </p>
             </form>
             
             
@@ -293,14 +296,14 @@ select {
                 <h2>Population Density</h2>
                 <canvas id="populationChart"></canvas>
             </div>
-            <div class="graph" id="revenue-analysis">
+            <!-- <div class="graph" id="revenue-analysis">
                 <h2>Revenue Analysis</h2>
                 <canvas id="revenueChart"></canvas>
             </div>
             <div class="graph" id="growth-trend">
                 <h2>Growth Trend</h2>
                 <canvas id="growthChart"></canvas>
-            </div>
+            </div> -->
         </aside>
     </div>
     <input type="hidden" id="cities-data" value='<%= JSON.stringify(cities) %>'>
@@ -549,7 +552,7 @@ function add(){
     createChart(
     document.getElementById("populationChart"),
     "bar",
-    ["Existing Stores", "Daily Orders", "Low"],
+    ["Existing Stores", "Daily Orders", "Foot Traffic"],
     [one, two, three],
     ["#007bff", "#28a745", "#dc3545"],
     ["#0056b3", "#1e7e34", "#c82333"]
